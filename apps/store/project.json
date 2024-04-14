@@ -1,0 +1,24 @@
+{
+  "name": "store",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/store/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "store:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "store:build:development"
+        },
+        "production": {
+          "buildTarget": "store:build:production"
+        }
+      }
+    }
+  }
+}

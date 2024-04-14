@@ -1,0 +1,24 @@
+{
+  "name": "services-catalog",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/services/catalog/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "services-catalog:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "services-catalog:build:development"
+        },
+        "production": {
+          "buildTarget": "services-catalog:build:production"
+        }
+      }
+    }
+  }
+}
